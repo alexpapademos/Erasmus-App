@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="title">Εγγραφή | Erasmus</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/forms.css" />
+  <script defer src="js/language-signup.js"></script>
+  <style>
+    .language-switcher {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      font-size: 1.4rem;
+    }
+    .lang-btn {
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 data-translate="signup_title">Εγγραφή Χρήστη</h1>
+
+    <div class="language-switcher">
+      <span class="lang-btn" data-lang="el">🇬🇷</span>
+      <span class="lang-btn" data-lang="en">🇬🇧</span>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" data-translate="menu_home">Αρχική</a></li>
+        <li><a href="more.html" data-translate="menu_more">Περισσότερα</a></li>
+        <li><a href="reqs.html" data-translate="menu_reqs">Απαιτήσεις</a></li>
+        <li><a href="application.html" data-translate="menu_apply">Αίτηση</a></li>
+        <li><a href="sign-up.html" data-translate="menu_signup">Εγγραφή</a></li>
+        <li><a href="login.html" data-translate="menu_login">Είσοδος</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 data-translate="signup_subtitle">Δημιούργησε νέο λογαριασμό</h2>
+      <form>
+        <fieldset>
+            <legend data-translate="signup_details">Στοιχεία Χρήστη</legend>
+
+            <label><span data-translate="fname">Όνομα:</span>
+              <input type="text" name="fname" required />
+            </label>
+            <label><span data-translate="lname">Επώνυμο:</span>
+              <input type="text" name="lname" required />
+            </label>
+            <label><span data-translate="email">Email:</span>
+              <input type="email" name="email" required />
+            </label>
+            <label><span data-translate="password">Κωδικός:</span>
+              <input type="password" name="password" required />
+            </label>
+            <label><span data-translate="confirm">Επιβεβαίωση Κωδικού:</span>
+              <input type="password" name="confirm_password" required />
+            </label>
+        </fieldset>
+
+        <div class="form-agreement">
+          <label><input type="checkbox" required /> <span data-translate="terms">Συμφωνώ με τους όρους χρήσης</span></label>
+          <button type="submit" data-translate="signup_btn">📝 Εγγραφή</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p data-translate="footer">&copy; 2025 Erasmus App | Πανεπιστήμιο Πελοποννήσου</p>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+      const password = form.querySelector('input[name="password"]').value;
+      const confirm = form.querySelector('input[name="confirm_password"]').value;
+
+      if (password !== confirm) {
+        e.preventDefault();
+        alert("Οι κωδικοί δεν ταιριάζουν!");
+      } else {
+        e.preventDefault();
+        alert("✅ Η εγγραφή ολοκληρώθηκε με επιτυχία!");
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

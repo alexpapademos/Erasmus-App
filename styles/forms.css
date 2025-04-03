@@ -1,0 +1,104 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+form legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+}
+
+/* Grid layout για ομαδοποιημένα πεδία */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Βασικά input πεδία */
+form label {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form select {
+  padding: 0.45rem 0.6rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.3rem;
+  row-gap: 0.3rem;
+}
+
+.radio-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Checkbox styling (γενικό) */
+form input[type="checkbox"] {
+  margin-right: 0.4rem;
+  transform: scale(1.1);
+  vertical-align: middle;
+}
+
+/* ✅ Ειδική στοίχιση για τη δήλωση αποδοχής όρων */
+.form-agreement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-agreement label {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.form-agreement input[type="checkbox"] {
+  transform: scale(1.1);
+}
+
+/* Κουμπί */
+.form-agreement button {
+  padding: 0.6rem 1.2rem;
+  background-color: #1a73e8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-agreement button:hover {
+  background-color: #125dc1;
+}

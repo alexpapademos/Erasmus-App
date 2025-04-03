@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Αίτηση | Erasmus+</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/forms.css" />
+  <style>
+    .language-switcher {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      font-size: 1.3rem;
+    }
+    .lang-btn {
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+  </style>
+  <script defer src="js/language-application.js"></script>
+</head>
+<body>
+  <header>
+    <h1 data-translate="form_title">Φόρμα Αίτησης Erasmus+</h1>
+
+    <div class="language-switcher">
+      <span class="lang-btn" data-lang="el">🇬🇷</span>
+      <span class="lang-btn" data-lang="en">🇬🇧</span>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a data-translate="nav_home" href="index.html">Αρχική</a></li>
+        <li><a data-translate="nav_more" href="more.html">Περισσότερα</a></li>
+        <li><a data-translate="nav_requirements" href="reqs.html">Απαιτήσεις</a></li>
+        <li><a data-translate="nav_application" href="application.html">Αίτηση</a></li>
+        <li><a data-translate="nav_signup" href="sign-up.html">Εγγραφή</a></li>
+        <li><a data-translate="nav_login" href="login.html">Είσοδος</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 data-translate="form_heading">Συμπλήρωσε την αίτησή σου</h2>
+      <form>
+        <fieldset>
+          <legend data-translate="personal_info">Προσωπικά Στοιχεία</legend>
+          <div class="form-grid">
+            <label><span data-translate="fname_label">Όνομα:</span>
+              <input type="text" name="fname" required />
+            </label>
+            <label><span data-translate="lname_label">Επίθετο:</span>
+              <input type="text" name="lname" required />
+            </label>
+            <label><span data-translate="id_label">Αριθμός Μητρώου:</span>
+              <input type="text" name="am" required />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-translate="academic_info">Ακαδημαϊκά Στοιχεία</legend>
+          <div class="form-grid">
+            <label><span data-translate="passed_label">Ποσοστό περασμένων μαθημάτων (%):</span>
+              <input type="number" name="passed_percent" min="0" max="100" />
+            </label>
+            <label><span data-translate="gpa_label">Μέσος όρος:</span>
+              <input type="number" name="gpa" step="0.01" min="0" max="10" />
+            </label>
+          </div>
+
+          <label style="margin-top: 1rem;"><span data-translate="english_level">Επίπεδο Αγγλικών:</span></label>
+          <div class="radio-group">
+            <label><input type="radio" name="english" value="A1" /> A1</label>
+            <label><input type="radio" name="english" value="A2" /> A2</label>
+            <label><input type="radio" name="english" value="B1" /> B1</label>
+            <label><input type="radio" name="english" value="B2" /> B2</label>
+            <label><input type="radio" name="english" value="C1" /> C1</label>
+            <label><input type="radio" name="english" value="C2" /> C2</label>
+          </div>
+
+          <label style="margin-top: 1rem;"><span data-translate="extra_lang">Γνώση επιπλέον ξένων γλωσσών:</span></label>
+          <div class="radio-group">
+            <label><input type="radio" name="extra_lang" value="yes" /> <span data-translate="yes">ΝΑΙ</span></label>
+            <label><input type="radio" name="extra_lang" value="no" /> <span data-translate="no">ΟΧΙ</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-translate="university">Πανεπιστήμια</legend>
+          <div class="form-grid">
+            <label><span data-translate="choice1">1η Επιλογή:</span>
+              <select>
+                <option>University of Amsterdam</option>
+                <option>University of Würzburg</option>
+                <option>Sorbonne University</option>
+              </select>
+            </label>
+            <label><span data-translate="choice2">2η Επιλογή:</span>
+              <select>
+                <option>University of Amsterdam</option>
+                <option>University of Würzburg</option>
+                <option>Sorbonne University</option>
+              </select>
+            </label>
+            <label><span data-translate="choice3">3η Επιλογή:</span>
+              <select>
+                <option>University of Amsterdam</option>
+                <option>University of Würzburg</option>
+                <option>Sorbonne University</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend data-translate="files">Αρχεία</legend>
+          <div class="form-grid">
+            <label><span data-translate="file_transcript">Αναλυτική βαθμολογία (PDF):</span>
+              <input type="file" accept=".pdf" />
+            </label>
+            <label><span data-translate="file_english">Πτυχίο αγγλικής γλώσσας:</span>
+              <input type="file" accept=".pdf,.jpg,.png" />
+            </label>
+            <label><span data-translate="file_other">Πτυχία άλλων ξένων γλωσσών:</span>
+              <input type="file" multiple accept=".pdf,.jpg,.png" />
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-agreement">
+          <label><input type="checkbox" required /> <span data-translate="agree">Αποδέχομαι τους όρους της αίτησης</span></label>
+          <button type="submit" data-translate="submit">📨 Υποβολή</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p data-translate="footer">&copy; 2025 Erasmus App | Πανεπιστήμιο Πελοποννήσου</p>
+  </footer>
+</body>
+</html>

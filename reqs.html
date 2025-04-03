@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-translate="title">Απαιτήσεις | Erasmus</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <script defer src="js/language-reqs.js"></script>
+  <style>
+    .language-switcher {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      font-size: 1.4rem;
+    }
+    .lang-btn {
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 data-translate="reqs_title">Ελάχιστες Απαιτήσεις Συμμετοχής</h1>
+
+    <div class="language-switcher">
+      <span class="lang-btn" data-lang="el">🇬🇷</span>
+      <span class="lang-btn" data-lang="en">🇬🇧</span>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" data-translate="menu_home">Αρχική</a></li>
+        <li><a href="more.html" data-translate="menu_more">Περισσότερα</a></li>
+        <li><a href="reqs.html" data-translate="menu_reqs">Απαιτήσεις</a></li>
+        <li><a href="application.html" data-translate="menu_apply">Αίτηση</a></li>
+        <li><a href="sign-up.html" data-translate="menu_signup">Εγγραφή</a></li>
+        <li><a href="login.html" data-translate="menu_login">Είσοδος</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section style="margin-top: 2rem;">
+        <h2 data-translate="quick_check">Φόρμα Γρήγορου Ελέγχου</h2>
+      
+        <form class="req-form">
+          <label><span data-translate="study_year">Έτος Σπουδών:</span>
+            <select required>
+              <option value="">--</option>
+              <option data-translate="year1">1ο</option>
+              <option data-translate="year2">2ο</option>
+              <option data-translate="year3">3ο</option>
+              <option data-translate="year4">4ο+</option>
+            </select>
+          </label>
+      
+          <label><span data-translate="passed_percent">Ποσοστό περασμένων μαθημάτων (%):</span>
+            <input type="number" min="0" max="100" required />
+          </label>
+      
+          <label><span data-translate="gpa">Μέσος όρος:</span>
+            <input type="number" step="0.01" min="0" max="10" required />
+          </label>
+      
+          <label data-translate="english_level">Επίπεδο Αγγλικών:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="eng" value="A1" required> A1</label>
+            <label><input type="radio" name="eng" value="A2"> A2</label>
+            <label><input type="radio" name="eng" value="B1"> B1</label>
+            <label><input type="radio" name="eng" value="B2"> B2</label>
+            <label><input type="radio" name="eng" value="C1"> C1</label>
+            <label><input type="radio" name="eng" value="C2"> C2</label>
+          </div>
+      
+          <button type="submit" data-translate="check_btn">Έλεγχος</button>
+        </form>
+      </section>      
+  </main>
+
+  <footer>
+    <p data-translate="footer">&copy; 2025 Erasmus App | Πανεπιστήμιο Πελοποννήσου</p>
+  </footer>
+</body>
+</html>

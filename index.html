@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Erasmus App</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <style>
+    .language-switcher {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.4rem;
+    }
+    .lang-btn {
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+  </style>
+  <script defer src="js/language-index.js"></script>
+</head>
+<body>
+  <header>
+    <h1 data-translate="main_title">Καλώς ήρθες στην Erasmus App</h1>
+
+    <div class="language-switcher">
+      <span class="lang-btn" data-lang="el">🇬🇷</span>
+      <span class="lang-btn" data-lang="en">🇬🇧</span>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" data-translate="menu_home">Αρχική</a></li>
+        <li><a href="more.html" data-translate="menu_more">Περισσότερα</a></li>
+        <li><a href="reqs.html" data-translate="menu_reqs">Απαιτήσεις</a></li>
+        <li><a href="application.html" data-translate="menu_apply">Αίτηση</a></li>
+        <li><a href="sign-up.html" data-translate="menu_signup">Εγγραφή</a></li>
+        <li><a href="login.html" data-translate="menu_login">Είσοδος</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-content">
+      <h2 data-translate="section_title">Τι είναι το Erasmus+;</h2>
+      <p data-translate="section_text">
+        Η Erasmus App είναι εδώ για να σε βοηθήσει να κάνεις το πρώτο βήμα προς μια αξέχαστη εμπειρία στο εξωτερικό!
+        Μάθε πώς μπορείς να συμμετέχεις, τι απαιτείται και κάνε εύκολα την αίτησή σου.
+      </p>
+      <img src="media/images/more_erasmus.jpg" alt="Erasmus+" />
+    </section>
+  </main>
+
+  <footer>
+    <p data-translate="footer_text">&copy; 2025 Erasmus App | Πανεπιστήμιο Πελοποννήσου</p>
+  </footer>
+</body>
+</html>
